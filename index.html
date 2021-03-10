@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My todo list</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="inner">
+            <div class="section">
+
+                <div class="btnLeft"></div><!--왼쪽버튼-->
+                
+                <div class="contentsAndRadio">
+                    <div class="contents"><!--시간, 슬라이드-->
+                        <div class="timeContainer">
+                            00:00:00
+                        </div>
+                        <div class="listSection">
+                            <ul class="slideList">
+                                <li class="contentsSlide">
+                                    <a>
+                                        <div class="dateContainer">
+                                            01/01 <br><br>
+                                            일요일
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="contentsSlide">
+                                    <a>
+                                        <div class="todoListContainer">
+                                            <input type="text" placeholder="Write what to do">
+                                            <ul class="todoWrap">
+                                                <li>
+                                                    <div>
+                                                        aaa
+                                                    </div>
+                                                    <button class="delBtn">
+                                                        <div class="trash"></div>
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        aaa
+                                                    </div>
+                                                    <button class="delBtn">
+                                                        <div class="trash"></div>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="contentsSlide">
+                                    <a>
+                                        <div class="weatherContainer">
+                                            wendy
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="radioContainer">
+                        <div class="radioBtn"><!--라디오버튼-->
+                            <input type="radio" name="slide" id="date">
+                            <input type="radio" name="slide" id="todoList" checked>
+                            <input type="radio" name="slide" id="weather">
+                        </div>
+                    </div>
+               </div>
+               <div class="btnLeft"></div><!--왼쪽버튼--> 
+           </div>
+       </div>
+       <script src="move.js"></script>
+    </body>
+</html>

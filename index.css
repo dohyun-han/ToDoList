@@ -1,0 +1,124 @@
+.trash{
+    background: url('imgs/delete.png') no-repeat 0 0;
+	width: 778px;
+	height: 980px;
+    zoom:0.02;
+}
+
+html, body{
+    background-color: beige;
+    height: 100%;
+    overflow: hidden;
+}
+ul{
+    list-style: none;
+    padding-left: 0%;
+}
+.inner{
+    height: 100%;
+}
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.section .contentsAndRadio{
+    width: 400px;
+    height: 600px;
+   
+}
+.section .contentsAndRadio .contents{
+    width: auto;
+    height: 550px;
+    margin-bottom: 10px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 7%;
+}
+.contents .timeContainer{
+    padding-top: 20px;
+}
+.contents .listSection{
+    display: flex;
+    overflow: hidden;
+    height: 100%;
+}
+.listSection .slideList{
+    white-space: nowrap;
+    width: 100%;
+    height: 77%;
+}
+.listSection .slideList > li{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.listSection .slideList > li > a{
+    display: block;
+}
+
+.slideList .dateContainer{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 35px;
+}
+.slideList .todoListContainer{
+    text-align: center;
+    display: table;
+    width: 100%;
+}
+.slideList .todoListContainer input{
+    width: 80%;
+    margin-top:50px;
+    height: 40px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+}
+.todoListContainer .todoWrap > li{
+    background-color: rgba(100,100,100,0.3);
+    margin:10px 30px;
+    padding:5px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    height:27px;
+    font-size: 17px;
+    vertical-align: baseline;
+}
+.todoListContainer .todoWrap > li div{
+    text-align: left;   
+}
+.todoListContainer .todoWrap > li > button{
+    border:none;
+    background-color: rosybrown;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 100%;    
+}
+.todoListContainer .todoWrap > li > button:hover{
+    opacity: 0.8;
+}
+.todoListContainer .todoWrap > li > button:focus{
+    border:none;
+    outline:none;
+}
+.section .contentsAndRadio .radioContainer{
+    text-align: center;
+}
+
+.slideList{
+    transform: translateX(-100%);
+}
+
+
+
+.contents .timeContainer{
+    text-align: center;
+    align-items: center;
+    font-size: 50px;
+}
