@@ -3,24 +3,31 @@
     <head>
         <meta charset="utf-8">
         <title>My todo list</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+        <div class="block">
+            <div class="loading"></div>
+        </div>
+        
         <div class="inner">
             <div class="section">
 
-                <div class="btnLeft"></div><!--왼쪽버튼-->
+                <div class="btnLeft" id="btnLeft">
+                    <div class="left"></div>
+                </div><!--왼쪽버튼-->
                 
                 <div class="contentsAndRadio">
                     <div class="contents"><!--시간, 슬라이드-->
-                        <div class="timeContainer">
+                        <div class="timeContainer" id="time">
                             00:00:00
                         </div>
                         <div class="listSection">
                             <ul class="slideList">
                                 <li class="contentsSlide">
                                     <a>
-                                        <div class="dateContainer">
+                                        <div class="dateContainer" id="date">
                                             01/01 <br><br>
                                             일요일
                                         </div>
@@ -69,9 +76,19 @@
                         </div>
                     </div>
                </div>
-               <div class="btnLeft"></div><!--왼쪽버튼--> 
+               <div class="btnRight" id="btnRight">
+                   <div class="right"></div>
+               </div><!--오른쪽버튼--> 
            </div>
        </div>
+       <script>
+            $(window).load(function(){
+                $('.block').delay(300).fadeOut();
+            })
+        </script>
        <script src="move.js"></script>
+       <script src="background.js"></script>
+       <script src="today.js"></script>
+       
     </body>
 </html>

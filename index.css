@@ -4,11 +4,70 @@
 	height: 980px;
     zoom:0.02;
 }
+.right{
+    background: url('imgs/arrow.png') no-repeat -62px -30px;
+	width: 76px;
+	height: 128px;
+    zoom:0.12;
+}
+.left{
+    background: url('imgs/arrow.png') no-repeat -262px -218px;
+	width: 76px;
+	height: 128px;
+    zoom:0.12;
+}
 
-html, body{
-    background-color: beige;
+
+
+
+
+
+.block{
+    position: fixed;
+    background-color: rgba(37, 37, 37);
+    width: 100%;
     height: 100%;
-    overflow: hidden;
+    opacity: 0.7;
+    z-index: 3;
+}
+.loading {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid rgb(39, 39, 39); /* Blue */
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: spin 1.5s ease-in-out infinite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@keyframes spin {
+    0% { transform: translate(-50%,-50%) rotate(0deg); }
+    100% { transform: translate(-50%,-50%) rotate(360deg); }
+ }
+
+
+
+
+ 
+body{
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.bgImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
 }
 ul{
     list-style: none;
@@ -23,16 +82,87 @@ ul{
     align-items: center;
     height: 100%;
 }
+
+
+
+
+.section .btnLeft{
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.9);
+    cursor: pointer;
+}
+.section .btnLeft .left{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.section .btnLeft:hover{
+    border:solid 2px rgba(200,200,200,0.7);
+}
+.section .btnLeft:hover > .left{
+    animation: rightMargin 1s ease-out infinite normal;
+}
+.section .btnRight{
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.9);
+    cursor: pointer;
+}
+.section .btnRight .right{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.section .btnRight:hover{
+    border:solid 2px rgba(200,200,200,0.7);
+}
+.section .btnRight:hover > .right{
+    animation: leftMargin 1s ease-out infinite normal;
+}
 .section .contentsAndRadio{
     width: 400px;
     height: 600px;
    
 }
+@keyframes rightMargin{
+    from{
+        transform: translate(50%,-50%);
+        opacity: 0;
+    }to{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+    }
+}
+@keyframes leftMargin{
+    from{
+        transform: translate(-150%,-50%);
+        opacity: 0;
+    }to{
+        transform: translate(-50%,-50%);
+        opacity: 1;
+    }
+}
+
+
+
 .section .contentsAndRadio .contents{
     width: auto;
     height: 550px;
     margin-bottom: 10px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(250,250,250,0.9);
     border-radius: 7%;
 }
 .contents .timeContainer{
@@ -70,6 +200,7 @@ ul{
     width: 100%;
 }
 .slideList .todoListContainer input{
+    padding:0 10px;
     width: 80%;
     margin-top:50px;
     height: 40px;
