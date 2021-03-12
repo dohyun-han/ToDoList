@@ -166,7 +166,7 @@ ul{
     border-radius: 7%;
 }
 .contents .timeContainer{
-    padding-top: 20px;
+    padding-top: 30px;
 }
 .contents .listSection{
     display: flex;
@@ -175,6 +175,7 @@ ul{
 }
 .listSection .slideList{
     white-space: nowrap;
+    margin:0 auto;
     width: 100%;
     height: 77%;
 }
@@ -183,21 +184,24 @@ ul{
     vertical-align: middle;
     width: 100%;
     height: 100%;
+    margin-right: -5.36px;
     transition: all 0.5s;
 }
 .listSection .slideList > li > a{
     display: block;
+    position: relative;
 }
 
 .slideList .dateContainer{
     padding-top: 100px;
     text-align: center;
     font-size: 35px;
+    line-height: 65px;
 }
 .slideList .todoListContainer{
     text-align: center;
-    display: table;
     width: 100%;
+    float: left;
 }
 .slideList .todoListContainer input{
     padding:0 10px;
@@ -215,21 +219,29 @@ ul{
     margin:10px 30px;
     padding:5px 20px;
     display: flex;
+
     justify-content: space-between;
     border-radius: 10px;
-    height:27px;
+    height:auto;
     font-size: 17px;
-    vertical-align: baseline;
 }
 .todoListContainer .todoWrap > li div{
-    text-align: left;   
+    text-align: left;
+    line-height: 28px;
+    width: 280px; 
+    height: auto;
+    white-space: normal;
+    word-break: break-all;
 }
 .todoListContainer .todoWrap > li > button{
+    position: relative;
     border:none;
     background-color: rosybrown;
     cursor: pointer;
     border-radius: 5px;
-    height: 100%;    
+    height: 30px;
+    width: 30px;   
+    margin:auto 0;
 }
 .todoListContainer .todoWrap > li > button:hover{
     opacity: 0.8;
@@ -237,6 +249,13 @@ ul{
 .todoListContainer .todoWrap > li > button:focus{
     border:none;
     outline:none;
+}
+.todoListContainer .todoWrap > li > button > .trash{
+    position: absolute;
+    left: 27%;
+    top: 15%;
+    height: 80%;
+    width: 80%;
 }
 .section .contentsAndRadio .radioContainer{
     text-align: center;
@@ -252,4 +271,12 @@ ul{
     text-align: center;
     align-items: center;
     font-size: 50px;
+}
+
+
+.listSection .slideList > li .weatherContainer{
+    padding-top: 70px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
 }
