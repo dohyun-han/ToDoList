@@ -13,7 +13,7 @@ function nowTime(){
                     `${minutes<10?`0${minutes}`:`${minutes}`}:`+
                     `${seconds<10?`0${seconds}`:`${seconds}`}`;
     const day = today.getDay();
-    const month = today.getMonth();
+    const month = today.getMonth()+1;
     const date = today.getDate();
     cal.innerText = `${month<10?`0${month}`:`${month}`}/`+
                     `${date<10?`0${date}`:`${date}`}
