@@ -1,5 +1,5 @@
-const time = document.getElementById("time"),
-    cal = document.getElementById("date");
+const time = document.querySelector(".timeContainer"),
+    cal = document.querySelector(".dateContainer");
 
 const dayList = ["Sunday","Monday"
 ,"Tuseday","Wednesday","Thursday","Friday","Saturday"]
